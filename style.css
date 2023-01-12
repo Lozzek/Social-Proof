@@ -1,0 +1,273 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+
+    font-size: 15px;
+    font-family: "League Spartan", sans-serif;
+    background: url(images/bg-pattern-top-mobile.svg) no-repeat, url(images/bg-pattern-bottom-mobile.svg) no-repeat 60vh;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .content {
+    min-height: 100%;
+    margin: .5rem 2rem;
+  }
+
+  .title {
+    color: hsl(300, 43%, 22%);
+    line-height: .8;
+    text-align: center;
+    font-weight: 700;
+    
+    margin-top: 2.4rem;
+    padding: 0px 24px;
+  }
+
+  .top-info {
+    text-align: center;
+    color:hsl(300, 43%, 22%);
+    font-weight: 400;
+    padding: 12px 18px;
+  }
+
+  .reviews {
+    background-color: hsl(333, 80%, 97%);
+    text-align: center;
+    padding: 8px;
+    border-radius: .4rem;
+    width: 75vw;
+    margin-left: 1rem;
+    margin-top: .7rem;
+  }
+
+  .reviews img {
+    display: inline-flex;
+    width: 15px;
+  }
+
+  .rate {
+    color:hsl(300, 43%, 22%);
+    font-weight: 700;
+  }
+
+  .buyer-section {
+    background-color: hsl(300, 43%, 22%);
+    text-align: left;
+
+    padding: 10px;
+    margin-top: .7rem;
+    margin-left: 2rem;
+    border-radius: .5rem;
+    width: 65vw;
+    height: 20vh;
+  }
+
+  .avatar {
+    border-radius: 3rem;
+    width: 8vw;
+    float: left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .name {
+    position: relative;
+    left: 1rem;
+    top: 1rem;
+
+    color: white;
+    font-size: .8rem;
+    font-weight: 500;
+  }
+
+  .buyer {
+    position: relative;
+    left: 1rem;
+    top: .8rem;
+
+    color:hsl(300, 43%, 52%);
+    font-size: .78rem;
+  }
+
+  .quote {
+    color: white;
+    position: relative;
+    top: 1rem;
+    float: left;
+    padding: 0px 24px;
+
+    font-size: .7rem;
+  }
+
+  .top-box {
+    margin-top: 2rem;
+  }
+
+  @media only screen and (min-width: 50em) {
+    
+    .title {
+      text-align: left;
+      font-size: 2em;
+      margin-top: 4em;
+      width: 16em;
+    }
+
+    .top-info {
+      text-align: left;
+      margin-top: 1rem;
+      font-size: 1.4em;
+      width: 27em;
+    }
+  }
+
+  @media only screen and (min-width: 50em) {
+    .box {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: 38em;
+      bottom: 18em;
+      padding: .2em;
+    }
+
+    .box2 {
+      position: relative;
+      left: 42em;
+    }
+
+    .box3 {
+      position: relative;
+      left: 46em;
+    }
+
+    .reviews {
+      width: 30em;
+      height: 4em;
+    }
+
+    .reviews img {
+      float: left;
+      margin-left: .8em;
+      margin-top: .8em;
+      width: 1.2em;
+    }
+
+    .rate {
+      margin-top: .6em;
+      margin-left: 1em;
+      font-size: 1.1em;
+    }
+  }
+
+  @media only screen and (min-width: 50em) {
+
+    .customers {
+      display: inline-flex;
+      position: relative;
+      bottom: 12em;
+    }
+
+    .middle-box {
+      position: relative;
+      top: 1em;
+    }
+
+    .last-box {
+      position: relative;
+      top: 2em;
+    }
+
+
+    .buyer-section {
+      max-width: 27em;
+      height: 17em;
+  }
+
+  .avatar {
+    border-radius: 3rem;
+    width: 3vw;
+    float: left;
+    margin-left: 1.6rem;
+    margin-top: 2rem;
+  }
+
+  .name {
+    position: relative;
+    left: 2rem;
+    top: 2rem;
+
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .buyer {
+    position: relative;
+    left: 2rem;
+    top: 1.8rem;
+
+    color:hsl(300, 43%, 52%);
+    font-size: 1rem;
+  }
+
+  .quote {
+    color: white;
+    position: relative;
+    top: 2rem;
+    float: left;
+    
+    width: 22rem;
+    font-size: 1.1rem;
+  }
+
+}
